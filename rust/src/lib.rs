@@ -1,3 +1,3 @@
-pub fn foo() -> String {
-    "foo".to_string()
-}
+mod fizz_buzz;
+
+pub struct Solution;
