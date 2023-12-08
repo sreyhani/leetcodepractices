@@ -24,16 +24,13 @@ impl TreeNode {
 pub fn check_childs(node: Rc<RefCell<TreeNode>>) -> String {
     let mut node = node.borrow_mut();
     match (node.left.take(), node.right.take()) {
-        (Some(left), Some(right)) => {
-            "(".to_string()
-                + &Solution::tree2str(Some(left))
-                + ")"
-                + "("
-                + &Solution::tree2str(Some(right))
-                + ")"
-        }
-        (None, Some(right)) => "()".to_string() + "(" + &Solution::tree2str(Some(right)) + ")",
-        (Some(left), None) => "(".to_string() + &Solution::tree2str(Some(left)) + ")",
+        (Some(left), Some(right)) => format!(
+            "({})({})",
+            Solution::tree2str(Some(left)),
+            Solution::tree2str(Some(right))
+        ),
+        (None, Some(right)) => format!("()({})", Solution::tree2str(Some(right))),
+        (Some(left), None) => format!("({})", Solution::tree2str(Some(left))),
         (None, None) => "".to_string(),
     }
 }
