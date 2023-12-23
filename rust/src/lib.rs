@@ -8,7 +8,7 @@ pub mod middle_node;
 mod number_occuring_more_than_25_percent;
 mod number_of_steps;
 mod ransom_note;
-
+mod widest_vertical_area_between_two_points_containing_no_points;
 mod transpose_matrix;
 
 pub struct Solution;
