@@ -10,6 +10,8 @@ mod minimum_time_to_make_rope_colorful;
 mod number_occuring_more_than_25_percent;
 mod number_of_steps;
 mod ransom_note;
+mod redistribute_characters_to_make_all_strings_equal;
 mod transpose_matrix;
 mod widest_vertical_area_between_two_points_containing_no_points;
+
 pub struct Solution;
