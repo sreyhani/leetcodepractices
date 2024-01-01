@@ -1,3 +1,4 @@
+mod assign_cookies;
 mod binary_tree_inorder_traversal;
 mod calculate_money_in_leetcode_bank;
 mod construct_string_from_binary_tree;
